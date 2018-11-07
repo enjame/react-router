@@ -13,6 +13,7 @@ function isModifiedEvent(event) {
  */
 class Link extends React.Component {
   static defaultProps = {
+    component: "a",
     replace: false
   };
 
@@ -34,7 +35,7 @@ class Link extends React.Component {
   }
 
   render() {
-    const { innerRef, replace, to, ...rest } = this.props; // eslint-disable-line no-unused-vars
+    const { component, innerRef, replace, to, ...rest } = this.props; // eslint-disable-line no-unused-vars
 
     return (
       <RouterContext.Consumer>
@@ -47,14 +48,12 @@ class Link extends React.Component {
               : to;
           const href = location ? context.history.createHref(location) : "";
 
-          return (
-            <a
-              {...rest}
-              onClick={event => this.handleClick(event, context.history)}
-              href={href}
-              ref={innerRef}
-            />
-          );
+          return React.createElement(component, {
+            ...rest,
+            href,
+            onClick: event => this.handleClick(event, context.history),
+            ref: innerRef
+          });
         }}
       </RouterContext.Consumer>
     );
