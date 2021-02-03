@@ -9,7 +9,7 @@
     "animated": "^0.2.1",
     "cheerio": "^0.22.0",
     "isomorphic-fetch": "^2.2.1",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.7.2",
     "query-string": "^5.1.0",
     "react": "^16.4.0",
     "react-css-property-operations": "^15.4.1",
