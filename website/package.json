@@ -17,7 +17,7 @@
     "react-icons": "^2.2.7",
     "react-media": "^1.6.1",
     "react-motion": "^0.5.2",
-    "react-transition-group": "^2.2.1",
+    "react-transition-group": "^2.9.0",
     "resolve-pathname": "^2.2.0",
     "slug": "^0.9.1"
   },
